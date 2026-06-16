@@ -1,0 +1,3 @@
+<div>
+    ${applicationScope.korisnici}
+</div>

@@ -18,12 +18,11 @@ public class SacuvajAction implements Action {
 
     @Override
     public String execute(HttpServletRequest request) {
-        KorisnikDto korisnik = (KorisnikDto) request.getSession(false).getAttribute("ulogovanKorisnik");
-        List<TrosakDto> troskovi = korisnik.getTroskovi();
+        List<TrosakDto> ulogovaniTroskovi = (List<TrosakDto>) request.getSession(false).getAttribute("ulogovaniTroskovi");
 
         TrosakDto noviTrosak = (TrosakDto) request.getSession(false).getAttribute("noviTrosak");
         
-        troskovi.add(noviTrosak);
+        ulogovaniTroskovi.add(noviTrosak);
         return "WEB-INF/main.jsp";
     }
 

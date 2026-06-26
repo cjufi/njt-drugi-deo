@@ -6,6 +6,7 @@ package rs.ac.bg.fon.njt_05_06_2026.action.impl;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
+import java.util.List;
 import rs.ac.bg.fon.njt_05_06_2026.action.Action;
 import rs.ac.bg.fon.njt_05_06_2026.dto.KorisnikDto;
 import rs.ac.bg.fon.njt_05_06_2026.dto.TrosakDto;
@@ -23,9 +24,9 @@ public class ObrisiPotvrdaAction implements Action {
 
         HttpSession s = request.getSession(false);
 
-        KorisnikDto korisnikDto = (KorisnikDto) s.getAttribute("ulogovanKorisnik");
+        List<TrosakDto> ulogovaniTroskovi = (List<TrosakDto>) request.getSession(false).getAttribute("ulogovaniTroskovi");
 
-        for (TrosakDto trosak : korisnikDto.getTroskovi()) {
+        for (TrosakDto trosak : ulogovaniTroskovi) {
             if (trosak.getNaziv().equals(naziv)) {
                 request.getSession(false).setAttribute("trosakZaBrisanje", trosak);
                 break;

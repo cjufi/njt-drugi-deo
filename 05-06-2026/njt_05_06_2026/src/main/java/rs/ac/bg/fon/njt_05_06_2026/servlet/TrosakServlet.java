@@ -51,7 +51,7 @@ public class TrosakServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
-        if (request.getSession(false).getAttribute("ulogovanKorisnik") == null) {
+        if (request.getSession(false).getAttribute("ulogovaniKorisnik") == null) {
             request.getRequestDispatcher("login.jsp").forward(request, response);
             return;
         }

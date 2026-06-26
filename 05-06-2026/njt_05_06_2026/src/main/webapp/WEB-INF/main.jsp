@@ -29,7 +29,7 @@
                 </tr>
             </thead>
             <tbody>
-                <c:forEach var="trosak" items="${sessionScope.ulogovanKorisnik.troskovi}">
+                <c:forEach var="trosak" items="${sessionScope.ulogovaniTroskovi}">
                     <tr>
                         <td>${trosak.naziv}</td>
                         <td>${trosak.iznos}</td>

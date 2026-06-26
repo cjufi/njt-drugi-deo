@@ -10,16 +10,15 @@ public class KorisnikDto {
 
     private String email;
     private String sifra;
-    List<TrosakDto> troskovi;
     StatusKorisnika status = StatusKorisnika.OFFLINE;
 
     public KorisnikDto() {
     }
 
-    public KorisnikDto(String email, String sifra, List<TrosakDto> troskovi) {
+    public KorisnikDto(String email, String sifra) {
         this.email = email;
         this.sifra = sifra;
-        this.troskovi = troskovi;
+//        this.troskovi = troskovi;
     }
 
     public String getEmail() {
@@ -36,14 +35,6 @@ public class KorisnikDto {
 
     public void setSifra(String sifra) {
         this.sifra = sifra;
-    }
-
-    public List<TrosakDto> getTroskovi() {
-        return troskovi;
-    }
-
-    public void setTroskovi(List<TrosakDto> troskovi) {
-        this.troskovi = troskovi;
     }
 
     public StatusKorisnika getStatus() {

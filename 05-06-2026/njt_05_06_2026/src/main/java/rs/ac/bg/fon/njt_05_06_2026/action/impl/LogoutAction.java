@@ -19,7 +19,7 @@ public class LogoutAction implements Action {
     @Override
     public String execute(HttpServletRequest request) {
         HttpSession session = request.getSession(false);
-        KorisnikDto korisnikDto = (KorisnikDto) session.getAttribute("ulogovanKorisnik");
+        KorisnikDto korisnikDto = (KorisnikDto) session.getAttribute("ulogovaniKorisnik");
         korisnikDto.setStatus(StatusKorisnika.OFFLINE);
         
         session.invalidate();

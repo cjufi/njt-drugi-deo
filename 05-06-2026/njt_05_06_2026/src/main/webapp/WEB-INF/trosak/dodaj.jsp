@@ -24,5 +24,6 @@
 
             <button type="submit">Dodaj Trosak</button>
         </form>
+        <p>${requestScope.dodajGreska}</p>
     </body>
 </html>

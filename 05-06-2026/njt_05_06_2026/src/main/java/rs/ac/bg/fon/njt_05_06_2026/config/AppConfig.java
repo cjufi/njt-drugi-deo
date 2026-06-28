@@ -9,6 +9,9 @@ import rs.ac.bg.fon.njt_05_06_2026.action.impl.LogoutAction;
 import rs.ac.bg.fon.njt_05_06_2026.action.impl.ObrisiAction;
 import rs.ac.bg.fon.njt_05_06_2026.action.impl.ObrisiPotvrdaAction;
 import rs.ac.bg.fon.njt_05_06_2026.action.impl.SacuvajAction;
+import rs.ac.bg.fon.njt_05_06_2026.dto.TrosakDto;
+import rs.ac.bg.fon.njt_05_06_2026.validator.Validator;
+import rs.ac.bg.fon.njt_05_06_2026.validator.impl.TrosakValidator;
 
 /**
  *
@@ -28,7 +31,7 @@ public class AppConfig {
 
     @Bean("dodaj")
     public Action dodajAction() {
-        return new DodajAction();
+        return new DodajAction(trosakValidator());
     }
 
     @Bean("sacuvaj")
@@ -49,6 +52,11 @@ public class AppConfig {
     @Bean("izmeni")
     public Action izmeniAction() {
         return new IzmeniAction();
+    }
+
+    @Bean("trosakValidator")
+    public Validator<TrosakDto> trosakValidator() {
+        return new TrosakValidator();
     }
 
 }

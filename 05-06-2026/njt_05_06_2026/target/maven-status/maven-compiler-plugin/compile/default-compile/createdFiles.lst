@@ -11,8 +11,10 @@ rs\ac\bg\fon\njt_05_06_2026\servlet\TrosakServlet.class
 rs\ac\bg\fon\njt_05_06_2026\action\impl\ObrisiAction.class
 rs\ac\bg\fon\njt_05_06_2026\dto\KorisnikDto.class
 rs\ac\bg\fon\njt_05_06_2026\dto\StatusTroska.class
+rs\ac\bg\fon\njt_05_06_2026\validator\impl\TrosakValidator.class
 rs\ac\bg\fon\njt_05_06_2026\action\impl\SacuvajAction.class
 rs\ac\bg\fon\njt_05_06_2026\listener\MyServletContextListener.class
+rs\ac\bg\fon\njt_05_06_2026\validator\Validator.class
 rs\ac\bg\fon\njt_05_06_2026\config\AppConfig.class
 rs\ac\bg\fon\njt_05_06_2026\dto\StatusKorisnika.class
 rs\ac\bg\fon\njt_05_06_2026\servlet\KorisnikServlet.class
